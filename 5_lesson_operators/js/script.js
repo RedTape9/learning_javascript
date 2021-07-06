@@ -24,4 +24,4 @@ console.log(2*4 === 8);  // hier wiederum wird auch auf den Datentyp Wert gelegt
 const isChecked = true,
       isClosed = true;
 
-console.log(isChecked && isClosed); // beides ist true, weshalb hier: true
+console.log(isChecked && isClosed); // beides ist true, weshalb: true
