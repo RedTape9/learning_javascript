@@ -1,0 +1,100 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.slideshow{
+    background-color: black;
+    width: 700px;
+    height: 500px;
+    box-shadow: 0px 0px 10px grey;
+    position: relative;
+}
+.slide{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: green;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 2s;
+
+}
+.slide-image {
+    width: 100%;
+    
+    
+}
+.slide-textarea {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 60%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    padding: 0 15% 0 15%;
+}
+.slide-ueberschrift {
+    font-size: 2em;
+    margin: 20% 0 0 0;
+    user-select: none;
+}
+.slide-beschreibung{
+    font-size: 1.6em;
+    margin: 0;  
+    user-select: none;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    color: rgba(255, 255, 255, 0.5);
+    user-select: none;
+    cursor: pointer;
+}
+.arrow:hover {
+    color: white;
+}
+.arrow-left {
+    left: 0;
+}
+.arrow-right {
+    right: 0;
+}
+.indikatorenliste {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    list-style-type: none;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.indikator {
+    padding: 0 10px;
+    user-select: none;
+    cursor: pointer;
+    color: white;
+    opacity: 0.5; /* Deckkraft eines Elementes */
+    transition: opacity 2s;
+}
+.aktiv{
+    opacity: 1;
+}

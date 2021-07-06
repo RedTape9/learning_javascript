@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="slideshow">
+        <div class="slide">
+            <img src="images/afs_giant-letters-formed-by-volunteers-1600x1066.jpg" height="500px" width="700px" alt="Gemeinsam" class="slide-image">
+            <div class="slide-textarea">
+                <h3 class=slide-ueberschrift>Gemeinsam</h3>
+                <p class="slide-beschreibung">Bewegen wir mehr!</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/China-Auslandsjahr-Michell-2012-Freunde-Kopie-1024x768-1.jpg" height="500px" width="700px" alt="China"
+                class="slide-image">
+            <div class="slide-textarea">
+                <h3 class=slide-ueberschrift>China</h3>
+                <p class="slide-beschreibung">Erweitere deinen Horizont!</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/Header-Erfahungsberichte-Gruppe-duy-pham-unsplash-1600x900.jpg" height="500px" width="700px" alt="Erfahrungen"
+                class="slide-image">
+            <div class="slide-textarea">
+                <h3 class=slide-ueberschrift>Einmal Ausland</h3>
+                <p class="slide-beschreibung">Erlebnis für's Leben!</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/Weltkarte-Hände-pixabay-1600x1068.jpg" height="500px" width="700px" alt="Gemeinsam" class="slide-image">
+            <div class="slide-textarea">
+                <h3 class=slide-ueberschrift>Einfach mal woanders...</h3>
+                <p class="slide-beschreibung">...einfach mal was anderes!</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="images/Gastfamilie.jpg" height="500px" width="700px" alt="Gastfamilie" class="slide-image">
+            <div class="slide-textarea">
+                <h3 class=slide-ueberschrift>Gastfamilie werden</h3>
+                <p class="slide-beschreibung">+ Träume erfüllen!</p>
+            </div>
+        </div>
+        <a class="arrow arrow-left" onclick="umschalten(-1)"><span>&#10094;</span></a>
+        <a class="arrow arrow-right" onclick="umschalten(1)"><span>&#10095;</span></a>
+        <ol class="indikatorenliste">
+            <li class="indikator" onclick="springeZuEintrag(0)">&#8226;</li>
+            <li class="indikator" onclick="springeZuEintrag(1)">&#8226;</li>
+            <li class="indikator" onclick="springeZuEintrag(2)">&#8226;</li>
+            <li class="indikator" onclick="springeZuEintrag(3)">&#8226;</li>
+            <li class="indikator" onclick="springeZuEintrag(4)">&#8226;</li>
+        </ol>
+    </div>
+    <script src=slideshow.js></script>
+
+</body>
+
+</html>
