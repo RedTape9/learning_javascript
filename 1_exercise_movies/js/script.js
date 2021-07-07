@@ -19,3 +19,10 @@ personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 
 console.log(personalMovieDB);
+
+let total = 0, count = 1;
+do{
+    total += count;
+    count += 1;
+}while(count - 10 != 1);
+console.log(total);
