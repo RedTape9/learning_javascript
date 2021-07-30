@@ -1,56 +1,112 @@
 "use strict";
 
-const arr = [2, 13, 26, 8, 10];
-arr.sort(compareNum);
-console.log(arr);
+let a = 5,
+    b = a;
 
-function compareNum(a, b) {
-    return a - b;
-}
-//arr.pop(); // löscht das letzte Element im Array
-//arr.push(10); // fügt ein Element an das Ende des Arrys an
-//arr[99] = 0;
+b = b + 5;
 
-// Wandeln von String in Array und zurück.
-let neu = "I love you!";
-let toArray = neu.split(" ");
-console.log(toArray);
-let backToString = toArray.join(" ");
-console.log(backToString);
+console.log(b);
+console.log(a);
 
+const obj = {
+    a: 5,
+    b: 1
+};
 
-console.log(arr.length); // duech den index auf 99 gibt uns .lengt hier 100 aus
-                         // obwohl wir garnicht so viele Werte gespeichert haben
-                         // = richtige Indexierung beachten!
-                         //.length ergibt sich immer aus dem Index 
-                         // des letzten Elementes + 1 
-console.log(arr); // Ausgabe: [ 1, 2, 3, 4, 5, <94 empty items>, 0 ]
-                  // daher sollte man immer die richtige Indexierung beachten!
+// const copy = obj;
 
-arr.forEach(function(item, i, arr) { // item ist hier eine beliebige Bezeichnung für das jeweilige Element 
-                                     // des Arrays, i der dazugehörige Index, arr ist der Verweis auf den Array
-    console.log(`${i}: ${item} innerhalb des Arrays ${arr}`);
-}
-);
+// copy.a = 10;
 
+// console.log(copy);
+// console.log(obj);
 
+// Hier werden oberflächliche Kopien von Objekten erstellt, 
+// heißt nur die obersten Ebenen im Objekt werden kopiert. 
+// Objekte in Objekten werden dagegen nur verlinkt.
 
-// arr.pop(); // .pop löscht das letzte Element aus dem Array
-arr.push(10); // .push fügt ein Element an das Ende des Arrays hinzu
+function copy(mainObj) {
+    let objCopy = {};
 
-console.log(arr)
-
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
+    let key;
+    for (key in mainObj) {  // Eigenschaftsnamen von mainObj der Variablen key zuweisen.
+        objCopy[key] = mainObj[key];
+    }
+    return objCopy;
 }
 
-for (let value of arr) {
-    console.log(value);
-} // diese Vorgehensweise hat den Vorteil dass hier break und continue 
-  // eingesetzt werden können. Im Gegensatz zu forEach
+const numbers = {
+    a: 2,
+    b: 5,
+    c: { // Achtung: Wenn das Objekt numbers kopiert wird, 
+         // wird an dieser Stelle der Verweis auf das c Objekt kopiert, 
+         // NICHT das c Objekt selbst. Heißt wenn die Eigenschaften von 
+         // c sich später ändern, so ändern sie sich bei beiden Objekten 
+         // (da nur ein Link/Verweis)
+        x: 7,
+        y: 4
+    }
+}
 
-const str = "I wanna rock!";
-const produducts = str.split(" ");
-console.log(produducts.join(' - '));
-console.log(typeof(str));
+const newNumbers = copy(numbers);
 
+newNumbers.a = 10;
+newNumbers.c.x = 99;
+console.log(numbers);
+console.log(newNumbers);
+
+// weiter Methode der oberflächlichen Kopie von Objekten
+
+const add = {
+    d: 17,
+    e: 20
+}
+
+const target = {};
+
+console.log(Object.assign(target, add)); // Das add Objekt wird oberflächlich in 
+                                         // das target Objekt kopiert und das target 
+                                        // Objekt zurückgegeben.
+
+console.log(Object.assign(target, numbers)); // das vorherige numbers Objekt wurde 
+                                             // ebenfalls in das target Objekt kopiert
+                                             // (hinten drangehängt).
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();
+
+newArray[1] = 'something new';
+console.log(newArray);
+console.log(oldArray);
+
+// neue Methode object spread property aus ES6 für Arrays und ab ES9 auch für Objekte
+
+const video = ['youtube', 'vimeo', 'rutube'],
+      blogs = ['wordpress', 'livejournal', 'blogger'],
+      internet = [...video, ...blogs, 'vk', 'facebook'];
+
+console.log(internet);
+
+
+function log(a, b, c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+
+const num = [2, 5, 7];
+
+log(...num);
+
+const array = ['a', 'b'];
+
+const secondArray = [...array];
+
+// das Ganze mit Objekten
+const newObject = {
+    one: 1,
+    two: 2
+};
+
+const newObject2 = {...newObject};
+
+console.log(newObject2);
