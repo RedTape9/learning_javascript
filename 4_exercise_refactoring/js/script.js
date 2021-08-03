@@ -131,12 +131,12 @@ for (let i = 1; i <= 2; i++) {
     personalMovieDB.movies[a] = b;
 }
 */
-// personalMovieDB.start();
+personalMovieDB.start();
 
-// personalMovieDB.remeberMyFilms();
+personalMovieDB.remeberMyFilms();
 
-// personalMovieDB.detectPersonalLevel();
+personalMovieDB.detectPersonalLevel();
 
-// personalMovieDB.writeYourGenres();
+personalMovieDB.writeYourGenres();
 
-// personalMovieDB.showMyDB(personalMovieDB.privat);
+personalMovieDB.showMyDB(personalMovieDB.privat);
