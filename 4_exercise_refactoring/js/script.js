@@ -140,3 +140,4 @@ personalMovieDB.detectPersonalLevel();
 personalMovieDB.writeYourGenres();
 
 personalMovieDB.showMyDB(personalMovieDB.privat);
+

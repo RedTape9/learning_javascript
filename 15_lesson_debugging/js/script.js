@@ -1,0 +1,34 @@
+"use strict";
+
+let str = "some";
+let strObj = new String(str);
+
+console.log(typeof(str));
+console.log(typeof(strObj));
+
+console.dir([1,2,3]);
+
+const soldier = {
+    health: 400,
+    armor: 100,
+    sayHello: function() {
+        console.log("Hello");
+    }
+};
+
+// const john = {
+//     health:100
+// };
+
+// veralterte Methode:
+// john.__proto__ = soldier;
+
+// aktuell:
+//Object.setPrototypeOf(john, soldier);
+
+// alternativ können wir john auch gleich 
+//beim erstellen mitteile dass er vom soldier erben soll:
+const john = Object.create(soldier);
+
+console.log(john.armor);
+john.sayHello();

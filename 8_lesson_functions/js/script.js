@@ -34,6 +34,6 @@ const logger = function() {  // function expression = werden erst nach Bekanntga
 const calc = (a, b) => { return a + b }; //Pfeilfunktion hat eine kürzere Syntax als ein Funktionsausdruck
                                         // und hat kein eigenes this, arguments, super, oder new.target. 
                                         // Solche Funktionsausdrücke sind am besten für Funktionen, 
-                                        // die nicht als Methode genutzt werden geeignet 
+                                        // die nicht als Methode genutzt werden, geeignet 
                                         // und können nicht als Konstruktoren verwendet werden.
 console.log(calc(6, 8));
