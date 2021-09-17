@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulare gestalten</title>
+    <style type="text/css">
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 0.9em;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    form {
+        padding: 1em;
+        background: #f9f9f9;
+        border: 1px, solid, lightgrey;
+        margin: 2rem auto auto auto;
+        max-width: 600px;
+        padding: 1em;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    
+    form input {
+        margin-bottom: 1rem;
+        background: white;
+        border: 1px solid darkgrey;
+    }
+
+    form button:hover {
+        background: deepskyblue;
+    }
+
+    label {
+        text-align: right;
+        display: block;
+        padding: 0.5em 1.5em 0.5em 0;
+    }
+
+    input {
+        width: 100%
+        padding: 0.7em;
+        margin-bottom: 0.5rem;
+    }
+
+    input:focus {
+        outline: 3px solid deepskyblue;
+    }
+
+    label {
+        float: left;
+        width: 200px;
+    }
+
+    input {
+        float: left;
+        width: calc(100% - 200px);
+    }
+
+    button {
+        float: right;
+        width: calc(100% - 200px);
+    }
+    </style>
+
+</head>
+<body>
+    <form>
+        <label for="firstName">Vorname</label>
+        <input type="text" id="firstName">
+
+        <label for="lastName">Nachname</label>
+        <input type="text" id="lastName">
+
+        <label for="birthday">Geburtstag</label>
+        <input type="date" id="birthday">
+
+        <label for="email">E-Mail</label>
+        <input type="email" id="email">
+
+        <button>Abschicken</button>
+    </form>
+    
+</body>
+</html>

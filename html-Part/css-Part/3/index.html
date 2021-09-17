@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schriften formatieren</title>
+    <style type="text/css">
+    body {
+        font-family: 'Times New Roman', Times, serif;
+
+        /* Zeilenhöhe 1,5-fach der normalen Schriftgröße */
+        line-height: 1.5em;
+    }
+    h1, h2 {
+        font-family: Arial;
+        /* Zeichenabstand 0,2-fach der normalen Schriftgröße */
+        letter-spacing: 0.2em;
+
+        /* Zeichenabstand 0.3-fache der normalen Schriftgröße */
+        word-spacing: 0.3em;
+    }
+
+    h1 {
+        /* 150% der normalen Schriftgröße */
+        font-size: 150%;
+    }
+    h2 {
+        /* 200% der normalen Schriftgröße */
+        font-size: 200%;
+
+        /* alles in Großbuchstaben */
+        text-transform: uppercase;
+
+        /* Text unterstrichen */
+        text-decoration: underline;
+    }
+
+    p {
+        /* Blocksatz */
+        text-align: justice;
+    }
+
+    ul li {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    /* Links */
+    a:link {
+        color: blue;
+    }
+
+    /* bereits besuchte Links */
+    a:visited {
+        color: green;
+    }
+
+    /* Links die gerade mit der Maus "berührt" werden */
+    a:hover {
+        color: black;
+        background-color: orange;
+    }
+
+    /* Links, die gerade geklickt werden */
+    a:active {
+        color: red;
+    }
+
+    .introduction {
+        /* Kursicschrift */
+        font-style: italic;
+
+        /* Fettschrift */
+        font-weight: bold;
+    }
+
+    .author {
+        font-family: Verdana;
+
+        /* Zeilenhöhe 0.3-fache der normalen Größe */
+        line-height: 0.3em;
+
+        /* Text rechts ausgerichtet */
+        text-align: right;
+    }
+
+    .date {
+        font-family: 'Courier New', Courier, monospace;
+
+        /* Zeilenhöhe 0.3-fache der normalen Schriftgröße */
+        line-height: 0.3em;
+
+        /* Text rechts ausarichten */
+        text-align: right;
+    }
+    </style>
+</head>
+
+<body>
+<h1>Blog posts</h1>
+<article>
+    <h2>Neue Website</h2>
+    <p class="introduction">
+        Liebe Leserinen und Leser,
+    </p>
+    <p>
+        ab sofort finden Sie die Blogs zu meinen Büchern vereint auf dieser 
+        Webseite. Auf diese Weise bleiben Sie an einer einzigen Stelle immer
+        auf dem Laufenden, wenn es um Updates rund um die genannten Bücher oder 
+        allgemeine Informationen, Tutorials etc. rund um die Web- und
+        Softwareentwicklung geht.
+    </p>
+    <p>
+        <ul>
+            <li>
+                <a href="https://twitter.com/cleancoderocker">@cleancoderocker</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/webdevhandbuch">@webdevhandbuch</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/nodejskochbuch">@nodejskochbuch</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/jshandbuch">@jshandbuch</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/jsprofibuch">@jsprofibuch</a>
+            </li>
+        </ul>  
+    </p>
+    <p>
+        Viel Spaß damit!
+    </p>
+    <p class="author">Philip Ackermann</p>
+    <p class="date">Mai 2020</p>
+</article>
+</body>
+</html>
